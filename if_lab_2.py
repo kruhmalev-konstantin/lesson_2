@@ -1,4 +1,3 @@
-"""
 str1 = input('Введите строку 1: ')
 str2 = input('Введите строку 2: ')
 
@@ -15,7 +14,6 @@ def check_str(str1,str2):
         return(str1,str2)
 
 print(check_str(str1,str2))
-"""
 
 def discounted(price, discount, max_discount=20, name=""):
     price = abs(float(price))
