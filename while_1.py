@@ -13,14 +13,18 @@ answers = {
 def ask_user():
     user_say = ''
     while user_say not in answers:
-        user_say = input('Задай вопрос? ')
-        if user_say in answers:
-            print(answers.get(user_say))
+        try:
+            user_say = input('Задай вопрос? ')
+            if user_say in answers:
+                print(answers.get(user_say))
+                break
+            elif user_say == 'Пока':
+                print('Ну пока')
+                break
+            else:
+                print('Сам ты {}'.format(user_say))
+        except KeyboardInterrupt:
+            print('Ну и ладно. Пока!')
             break
-        elif user_say == 'Пока':
-            print('Ну пока')
-            break
-        else:
-            print('Сам ты {}'.format(user_say))
 
 ask_user()
